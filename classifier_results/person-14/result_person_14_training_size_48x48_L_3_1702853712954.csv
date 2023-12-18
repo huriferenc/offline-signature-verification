@@ -1,0 +1,3 @@
+classifier,best_params,best_score,best_accuracy,accuracy,confusion_matrix,n,p,tn,fp,fn,tp,runtime
+linear,"{'C': 0.0001, 'kernel': 'linear'}",1.0,"{'0': {'precision': 0.5, 'recall': 1.0, 'f1-score': 0.6666666666666666, 'support': 1.0}, '1': {'precision': 1.0, 'recall': 0.8, 'f1-score': 0.888888888888889, 'support': 5.0}, 'accuracy': 0.8333333333333334, 'macro avg': {'precision': 0.75, 'recall': 0.9, 'f1-score': 0.7777777777777778, 'support': 6.0}, 'weighted avg': {'precision': 0.9166666666666666, 'recall': 0.8333333333333334, 'f1-score': 0.851851851851852, 'support': 6.0}}",0.8333333333333334,"[[1 0]
+ [1 4]]",24,24,1,0,1,4,0 days 00:00:13.138890

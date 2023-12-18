@@ -1,0 +1,30 @@
+
+##################################################################################################################
+Linear SVM Classifier:
+
+Legjobb parameterek: {'C': 0.00030000000000000003, 'kernel': 'linear'}
+Eredmeny : 93.75%
+Legjobb hiperparameterek melletti pontossaga:
+              precision    recall  f1-score   support
+
+           0       1.00      0.67      0.80         3
+           1       0.00      0.00      0.00         0
+
+    accuracy                           0.67         3
+   macro avg       0.50      0.33      0.40         3
+weighted avg       1.00      0.67      0.80         3
+
+Pontossag: 0.6666666666666666
+Tevesztesi matrix:
+[[2 1]
+ [0 0]]
+Osszes hamis alairasok szama(N): [0 0 0 0 0 0 0 0 0 0]
+Osszes valodi alairasok szama(P): [1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+Tevesen valodinak cimkezett alairasok szama(FP): 1
+Helyesen hamisnak cimkezett alairasok szama(TN): 2
+Tevesen valodinak cimkezett alairasok szama(FP): 1
+Tevesen hamisnak cimkezett alairasok szama(FN): 0
+Helyesen valodinak cimkezett alairasok szama(TP): 0
+Futasi ido: 0:00:13.606468
+##################################################################################################################
+

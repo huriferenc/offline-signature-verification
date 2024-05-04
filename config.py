@@ -4,7 +4,7 @@ from pathlib import Path
 MIN_L = 2
 MAX_L = 10
 
-PERSON_ID = 14
+PERSON_ID = 1
 IMAGE_NUMBER = 24
 
 SIGN_FOLDER_ORIG = Path.cwd() / 'CEDAR' / 'full_org'

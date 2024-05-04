@@ -46,6 +46,16 @@ class App:
 
         for i, item in enumerate(class_segments):
             DQSSi, ni, pi, DQSSi_img = item
+            
+            # Ha nincs adott osztályú szegmens, akkor folytassa a következő osztállyal
+            if ni == 0:
+                data_table['ni'].append(0)
+                data_table['pi/P'].append(0)
+                data_table['pi/ni'].append(0)
+                data_table['cp/P'].append(0)
+                data_table['mCi'].append(0)
+                data_table['rij/P'].append(0)
+                continue
 
             # cp - Közös pixelek száma a szomszédos osztállyal
             # Ci and Cj, j = (i+1) mod 12

@@ -1,0 +1,145 @@
+
+##################################################################################################################
+Linear SVM Classifier:
+
+Legjobb parameterek: {'C': 0.0001, 'kernel': 'linear'}
+Eredmeny : 97.91666666666667%
+Legjobb hiperparameterek melletti pontossaga:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00         4
+           1       1.00      1.00      1.00         2
+
+    accuracy                           1.00         6
+   macro avg       1.00      1.00      1.00         6
+weighted avg       1.00      1.00      1.00         6
+
+Pontossag: 1.0
+Tevesztesi matrix:
+[[2 0]
+ [0 4]]
+Osszes hamis alairasok szama(N): 24
+Osszes valodi alairasok szama(P): 24
+Tevesen valodinak cimkezett alairasok szama(FP): 0
+Helyesen hamisnak cimkezett alairasok szama(TN): 2
+Tevesen hamisnak cimkezett alairasok szama(FN): 0
+Helyesen valodinak cimkezett alairasok szama(TP): 4
+Futasi ido: 0:00:13.540718
+##################################################################################################################
+
+
+##################################################################################################################
+Rbf SVM Classifier:
+
+Legjobb parameterek: {'C': 0.987, 'gamma': 0.01, 'kernel': 'rbf'}
+Eredmeny : 73.75%
+Legjobb hiperparameterek melletti pontossaga:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00         4
+           1       1.00      1.00      1.00         2
+
+    accuracy                           1.00         6
+   macro avg       1.00      1.00      1.00         6
+weighted avg       1.00      1.00      1.00         6
+
+Pontossag: 1.0
+Tevesztesi matrix:
+[[2 0]
+ [0 4]]
+Osszes hamis alairasok szama(N): 24
+Osszes valodi alairasok szama(P): 24
+Tevesen valodinak cimkezett alairasok szama(FP): 0
+Helyesen hamisnak cimkezett alairasok szama(TN): 2
+Tevesen hamisnak cimkezett alairasok szama(FN): 0
+Helyesen valodinak cimkezett alairasok szama(TP): 4
+Futasi ido: 0:04:34.706570
+##################################################################################################################
+
+
+##################################################################################################################
+Poly SVM Classifier:
+
+Legjobb parameterek: {'C': 0.2729, 'kernel': 'poly'}
+Eredmeny : 97.5%
+Legjobb hiperparameterek melletti pontossaga:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00         4
+           1       1.00      1.00      1.00         2
+
+    accuracy                           1.00         6
+   macro avg       1.00      1.00      1.00         6
+weighted avg       1.00      1.00      1.00         6
+
+Pontossag: 1.0
+Tevesztesi matrix:
+[[2 0]
+ [0 4]]
+Osszes hamis alairasok szama(N): 24
+Osszes valodi alairasok szama(P): 24
+Tevesen valodinak cimkezett alairasok szama(FP): 0
+Helyesen hamisnak cimkezett alairasok szama(TN): 2
+Tevesen hamisnak cimkezett alairasok szama(FN): 0
+Helyesen valodinak cimkezett alairasok szama(TP): 4
+Futasi ido: 0:00:13.423601
+##################################################################################################################
+
+
+##################################################################################################################
+Sigmoid SVM Classifier:
+
+Legjobb parameterek: {'C': 0.9647, 'kernel': 'sigmoid'}
+Eredmeny : 59.166666666666664%
+Legjobb hiperparameterek melletti pontossaga:
+              precision    recall  f1-score   support
+
+           0       1.00      0.25      0.40         4
+           1       0.40      1.00      0.57         2
+
+    accuracy                           0.50         6
+   macro avg       0.70      0.62      0.49         6
+weighted avg       0.80      0.50      0.46         6
+
+Pontossag: 0.5
+Tevesztesi matrix:
+[[2 0]
+ [3 1]]
+Osszes hamis alairasok szama(N): 24
+Osszes valodi alairasok szama(P): 24
+Tevesen valodinak cimkezett alairasok szama(FP): 0
+Helyesen hamisnak cimkezett alairasok szama(TN): 2
+Tevesen hamisnak cimkezett alairasok szama(FN): 3
+Helyesen valodinak cimkezett alairasok szama(TP): 1
+Futasi ido: 0:00:13.622620
+##################################################################################################################
+
+
+##################################################################################################################
+Random_forest Classifier:
+
+Legjobb parameterek: {'bootstrap': True, 'max_depth': 3, 'max_features': 3, 'n_estimators': 10}
+Eredmeny : 100.0%
+Legjobb hiperparameterek melletti pontossaga:
+              precision    recall  f1-score   support
+
+           0       1.00      0.75      0.86         4
+           1       0.67      1.00      0.80         2
+
+    accuracy                           0.83         6
+   macro avg       0.83      0.88      0.83         6
+weighted avg       0.89      0.83      0.84         6
+
+Pontossag: 0.8333333333333334
+Tevesztesi matrix:
+[[2 0]
+ [1 3]]
+Osszes hamis alairasok szama(N): 24
+Osszes valodi alairasok szama(P): 24
+Tevesen valodinak cimkezett alairasok szama(FP): 0
+Helyesen hamisnak cimkezett alairasok szama(TN): 2
+Tevesen hamisnak cimkezett alairasok szama(FN): 1
+Helyesen valodinak cimkezett alairasok szama(TP): 3
+Futasi ido: 0:00:01.072270
+##################################################################################################################
+

@@ -129,7 +129,6 @@ class App:
 
     def run(self):
         start_time = datetime.now()
-        print(f"Starting time: {start_time}")
 
         saving_folder_original = SAVING_FOLDER_ORIG
         saving_folder_forgery = SAVING_FOLDER_FORG
@@ -162,6 +161,7 @@ class App:
                 )
 
         end_time = datetime.now()
+        print(f"Starting time: {start_time}")
         print(f"Ending time: {end_time}")
         print(f"Time difference: {end_time - start_time}")
 

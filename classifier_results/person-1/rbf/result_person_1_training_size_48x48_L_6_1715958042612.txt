@@ -1,0 +1,29 @@
+
+##################################################################################################################
+Rbf SVM Classifier:
+
+Legjobb parameterek: {'C': 0.0001, 'gamma': 0.060000000000000005, 'kernel': 'rbf'}
+Eredmeny : 52.91666666666668%
+Legjobb hiperparameterek melletti pontossaga:
+              precision    recall  f1-score   support
+
+           0       1.00      0.67      0.80         3
+           1       0.75      1.00      0.86         3
+
+    accuracy                           0.83         6
+   macro avg       0.88      0.83      0.83         6
+weighted avg       0.88      0.83      0.83         6
+
+Pontossag: 0.8333333333333334
+Tevesztesi matrix:
+[[3 0]
+ [1 2]]
+Osszes hamis alairasok szama(N): 24
+Osszes valodi alairasok szama(P): 24
+Tevesen valodinak cimkezett alairasok szama(FP): 0
+Helyesen hamisnak cimkezett alairasok szama(TN): 3
+Tevesen hamisnak cimkezett alairasok szama(FN): 1
+Helyesen valodinak cimkezett alairasok szama(TP): 2
+Futasi ido: 0:04:34.287972
+##################################################################################################################
+

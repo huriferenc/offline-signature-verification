@@ -32,6 +32,7 @@ def get_error_rate_dataframes(
     for threshold in range(MIN_L, MAX_L + 1):
         df = pd.read_csv(
             CLASSIFIER_RESULTS_FOLDER
+            / str(time_index)
             / CLASSIFIER_RESULT_FNAME.format(
                 training_size=training_size, l=threshold, time_index=time_index
             ),
@@ -67,7 +68,9 @@ if __name__ == "__main__":
                 TIME_INDEX, training_size, classifier
             )
 
-            CLASSIFICATION_VISUALIZATION_FOLDER.mkdir(parents=True, exist_ok=True)
+            (CLASSIFICATION_VISUALIZATION_FOLDER / str(TIME_INDEX)).mkdir(
+                parents=True, exist_ok=True
+            )
 
             df_plot = pd.DataFrame(
                 {"FRR": FRR, "FAR": FAR, "AER": AER}, index=range(MIN_L, MAX_L + 1)
@@ -76,6 +79,7 @@ if __name__ == "__main__":
 
             plt.savefig(
                 CLASSIFICATION_VISUALIZATION_FOLDER
+                / str(TIME_INDEX)
                 / CLASSIFICATION_VISUALIZATION_FNAME.format(
                     classifier=classifier,
                     training_size=training_size,

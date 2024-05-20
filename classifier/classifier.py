@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 from datetime import datetime
+from pathlib import Path
+import pickle
 from typing import Literal
 import numpy as np
 import pandas as pd
@@ -59,6 +61,8 @@ class Classifier:
                 "n_estimators": [10, 25, 50],
             }
 
+        self.model = None
+
         self.best_params = None
         self.best_score = None
         self.best_accuracy = None
@@ -90,6 +94,10 @@ class Classifier:
             "tp": self.tp,
             "runtime": self.runtime,
         }
+
+    def save_model(self, fname: Path | str):
+        pickle.dump(self.model, open(fname, "wb"))
+        del self.model
 
     def __str__(self) -> str:
         return f"""
@@ -246,6 +254,9 @@ Futasi ido: {self.runtime}
 
         # Model tanítása
         best_clf.fit(X_train_reduced, y_train)
+
+        # Model elmentése
+        self.model = best_clf
 
         # Legjobb hiperparaméterek melletti pontosságának kiértékelése
         grid_predictions = grid_search.predict(X_test_reduced)

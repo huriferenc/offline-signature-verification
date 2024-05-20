@@ -51,6 +51,11 @@ CLASSIFIER_RESULT_FNAME_TEXT = (
     + "_training_size_{training_size}x{training_size}_L_{l}_{time_index}.txt"
 )
 
+CLASSIFIER_MODEL_FNAME = (
+    f"result_person_{PERSON_ID}"
+    + "_training_size_{training_size}x{training_size}_L_{l}_clf_{clf}_{time_index}.model"
+)
+
 CLASSIFICATION_VISUALIZATION_FNAME = (
     f"classification_person_{PERSON_ID}"
     + "_training_size_{training_size}x{training_size}_{classifier}_{time_index}.png"

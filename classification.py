@@ -3,6 +3,7 @@ from datetime import datetime
 import pandas as pd
 from classifier.classifier import CLF_TYPE, Classifier
 from config import (
+    CLASSIFIER_MODEL_FNAME,
     CLASSIFIER_RESULT_FNAME,
     CLASSIFIER_RESULT_FNAME_TEXT,
     CLASSIFIER_RESULTS_FOLDER,
@@ -54,7 +55,9 @@ def export_results(results: list, training_size: int, threshold: int):
     # df_best_params = pd.DataFrame([self.best_params])
     # df = pd.concat([df, df_best_params], ignore_index=True)
 
-    export_path = CLASSIFIER_RESULTS_FOLDER / CLASSIFIER_RESULT_FNAME.format(
+    export_path = CLASSIFIER_RESULTS_FOLDER.format(
+        time_index=NOW_TIME_INDEX
+    ) / CLASSIFIER_RESULT_FNAME.format(
         training_size=training_size, l=threshold, time_index=NOW_TIME_INDEX
     )
     export_path.parent.mkdir(parents=True, exist_ok=True)
@@ -63,7 +66,9 @@ def export_results(results: list, training_size: int, threshold: int):
 
 
 def export_results_str(results: list, training_size: int, threshold: int):
-    export_path = CLASSIFIER_RESULTS_FOLDER / CLASSIFIER_RESULT_FNAME_TEXT.format(
+    export_path = CLASSIFIER_RESULTS_FOLDER.format(
+        time_index=NOW_TIME_INDEX
+    ) / CLASSIFIER_RESULT_FNAME_TEXT.format(
         training_size=training_size, l=threshold, time_index=NOW_TIME_INDEX
     )
     export_path.parent.mkdir(parents=True, exist_ok=True)
@@ -71,6 +76,22 @@ def export_results_str(results: list, training_size: int, threshold: int):
     with open(export_path, "a") as file:
         for result in results:
             file.write(result + "\n")
+
+
+def export_model(
+    classifier: Classifier, training_size: int, threshold: int, clf_type: CLF_TYPE
+):
+    export_model_path = CLASSIFIER_RESULTS_FOLDER.format(
+        time_index=NOW_TIME_INDEX
+    ) / CLASSIFIER_MODEL_FNAME.format(
+        training_size=training_size,
+        l=threshold,
+        clf=clf_type,
+        time_index=NOW_TIME_INDEX,
+    )
+    export_model_path.parent.mkdir(parents=True, exist_ok=True)
+
+    classifier.save_model(export_model_path)
 
 
 if __name__ == "__main__":
@@ -95,6 +116,8 @@ if __name__ == "__main__":
                 result_str.append(str(classifier))
 
                 results.append(classifier.get_result())
+
+                export_model(classifier, training_size, threshold, clf_type)
 
             # for result in result_str:
             #   print(result)

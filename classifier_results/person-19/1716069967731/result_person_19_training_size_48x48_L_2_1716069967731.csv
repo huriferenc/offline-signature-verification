@@ -1,0 +1,9 @@
+classifier,best_params,best_score,best_accuracy,accuracy,confusion_matrix,n,p,tn,fp,fn,tp,runtime
+linear,"{'C': 0.0001, 'kernel': 'linear'}",0.975,"{'0': {'precision': 1.0, 'recall': 1.0, 'f1-score': 1.0, 'support': 2.0}, '1': {'precision': 1.0, 'recall': 1.0, 'f1-score': 1.0, 'support': 4.0}, 'accuracy': 1.0, 'macro avg': {'precision': 1.0, 'recall': 1.0, 'f1-score': 1.0, 'support': 6.0}, 'weighted avg': {'precision': 1.0, 'recall': 1.0, 'f1-score': 1.0, 'support': 6.0}}",1.0,"[[4 0]
+ [0 2]]",24,24,4,0,0,2,0 days 00:00:13.899150
+poly,"{'C': 0.8695, 'kernel': 'poly'}",0.975,"{'0': {'precision': 1.0, 'recall': 1.0, 'f1-score': 1.0, 'support': 3.0}, '1': {'precision': 1.0, 'recall': 1.0, 'f1-score': 1.0, 'support': 3.0}, 'accuracy': 1.0, 'macro avg': {'precision': 1.0, 'recall': 1.0, 'f1-score': 1.0, 'support': 6.0}, 'weighted avg': {'precision': 1.0, 'recall': 1.0, 'f1-score': 1.0, 'support': 6.0}}",1.0,"[[3 0]
+ [0 3]]",24,24,3,0,0,3,0 days 00:00:12.844861
+sigmoid,"{'C': 0.0001, 'kernel': 'sigmoid'}",0.575,"{'0': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 6.0}, '1': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 0.0}, 'accuracy': 0.0, 'macro avg': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 6.0}, 'weighted avg': {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 6.0}}",0.0,"[[0 0]
+ [6 0]]",24,24,0,0,6,0,0 days 00:00:13.250200
+random_forest,"{'bootstrap': True, 'max_depth': 3, 'max_features': 4, 'n_estimators': 10}",1.0,"{'0': {'precision': 1.0, 'recall': 1.0, 'f1-score': 1.0, 'support': 3.0}, '1': {'precision': 1.0, 'recall': 1.0, 'f1-score': 1.0, 'support': 3.0}, 'accuracy': 1.0, 'macro avg': {'precision': 1.0, 'recall': 1.0, 'f1-score': 1.0, 'support': 6.0}, 'weighted avg': {'precision': 1.0, 'recall': 1.0, 'f1-score': 1.0, 'support': 6.0}}",1.0,"[[3 0]
+ [0 3]]",24,24,3,0,0,3,0 days 00:00:01.096464

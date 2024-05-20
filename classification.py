@@ -55,10 +55,12 @@ def export_results(results: list, training_size: int, threshold: int):
     # df_best_params = pd.DataFrame([self.best_params])
     # df = pd.concat([df, df_best_params], ignore_index=True)
 
-    export_path = CLASSIFIER_RESULTS_FOLDER.format(
-        time_index=NOW_TIME_INDEX
-    ) / CLASSIFIER_RESULT_FNAME.format(
-        training_size=training_size, l=threshold, time_index=NOW_TIME_INDEX
+    export_path = (
+        CLASSIFIER_RESULTS_FOLDER
+        / str(NOW_TIME_INDEX)
+        / CLASSIFIER_RESULT_FNAME.format(
+            training_size=training_size, l=threshold, time_index=NOW_TIME_INDEX
+        )
     )
     export_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -66,10 +68,12 @@ def export_results(results: list, training_size: int, threshold: int):
 
 
 def export_results_str(results: list, training_size: int, threshold: int):
-    export_path = CLASSIFIER_RESULTS_FOLDER.format(
-        time_index=NOW_TIME_INDEX
-    ) / CLASSIFIER_RESULT_FNAME_TEXT.format(
-        training_size=training_size, l=threshold, time_index=NOW_TIME_INDEX
+    export_path = (
+        CLASSIFIER_RESULTS_FOLDER
+        / str(NOW_TIME_INDEX)
+        / CLASSIFIER_RESULT_FNAME_TEXT.format(
+            training_size=training_size, l=threshold, time_index=NOW_TIME_INDEX
+        )
     )
     export_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -81,13 +85,15 @@ def export_results_str(results: list, training_size: int, threshold: int):
 def export_model(
     classifier: Classifier, training_size: int, threshold: int, clf_type: CLF_TYPE
 ):
-    export_model_path = CLASSIFIER_RESULTS_FOLDER.format(
-        time_index=NOW_TIME_INDEX
-    ) / CLASSIFIER_MODEL_FNAME.format(
-        training_size=training_size,
-        l=threshold,
-        clf=clf_type,
-        time_index=NOW_TIME_INDEX,
+    export_model_path = (
+        CLASSIFIER_RESULTS_FOLDER
+        / str(NOW_TIME_INDEX)
+        / CLASSIFIER_MODEL_FNAME.format(
+            training_size=training_size,
+            l=threshold,
+            clf=clf_type,
+            time_index=NOW_TIME_INDEX,
+        )
     )
     export_model_path.parent.mkdir(parents=True, exist_ok=True)
 

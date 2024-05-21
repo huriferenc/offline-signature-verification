@@ -24,10 +24,15 @@ EXTRACTED_FEATURE_SET_SAVING_FOLDER = (
 VISUALIZATION_FOLDER = Path.cwd() / "visualizations" / f"person-{PERSON_ID}"
 
 CLASSIFIER_RESULTS_FOLDER = Path.cwd() / "classifier_results" / f"person-{PERSON_ID}"
+CLASSIFIER_RESULTS_FOLDER_FORMAT = (
+    "classifier_results/" + "person-{person_id}/{time_index}"
+)
 
 CLASSIFICATION_VISUALIZATION_FOLDER = (
     Path.cwd() / "classifier_visualizations" / f"person-{PERSON_ID}"
 )
+
+ERROR_RATES_FOLDER = "error_rates/person_{person_ids}/{time_index}"
 
 FNAME_ORIG = f"original_{PERSON_ID}" + "_{sign_index}.png"
 FNAME_FORG = f"forgeries_{PERSON_ID}" + "_{sign_index}.png"
@@ -46,6 +51,7 @@ CLASSIFIER_RESULT_FNAME = (
     f"result_person_{PERSON_ID}"
     + "_training_size_{training_size}x{training_size}_L_{l}_{time_index}.csv"
 )
+CLASSIFIER_RESULT_FNAME_2 = "result_person_{person_id}_training_size_{training_size}x{training_size}_L_{l}_{time_index}.csv"
 CLASSIFIER_RESULT_FNAME_TEXT = (
     f"result_person_{PERSON_ID}"
     + "_training_size_{training_size}x{training_size}_L_{l}_{time_index}.txt"
@@ -60,3 +66,5 @@ CLASSIFICATION_VISUALIZATION_FNAME = (
     f"classification_person_{PERSON_ID}"
     + "_training_size_{training_size}x{training_size}_{classifier}_{time_index}.png"
 )
+
+ERROR_RATES_FNAME = "error_rates_person_{person_ids}_training_size_{training_size}x{training_size}_{classifier}_{time_index}.png"

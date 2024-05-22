@@ -18,8 +18,7 @@ from config import (
 MIN_THRESHOLD = MIN_L
 MAX_THRESHOLD = 9
 
-# CLASSIFIERS: list[CLF_TYPE] = ["linear", "rbf", "poly", "sigmoid", "random_forest"]
-CLASSIFIERS: list[CLF_TYPE] = ["linear", "poly", "sigmoid", "random_forest"]
+CLASSIFIERS: list[CLF_TYPE] = ["linear", "rbf", "poly", "sigmoid", "random_forest"]
 
 PERSONS = [
     {
